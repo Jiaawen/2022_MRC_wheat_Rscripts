@@ -10,7 +10,7 @@ We consulted Statistics Services Ltd (Reading, UK) for the analysis of our count
 We used mixed effects models for this, in order to take into account both the three biological replicates for each genotype (random effect), and the distribution of granule number chloroplast for each genotype. We tried a Poisson model first, but this showed overdispersion so we then proceeded with negative binomial models, which were not overdispersed. 
 
 
-## Analysis 1: Non-backcrossed lines: WT Kronos, *mrc-1*, *mrc-2*, *mrc-3*
+#Analysis 1: Non-backcrossed lines: WT Kronos, *mrc-1*, *mrc-2*, *mrc-3*
 
 Importing and sorting data
 ```{r, results=FALSE}
@@ -33,7 +33,7 @@ aggregate(dat.disag$counts~dat.disag$rep.id,FUN=length)
 ```
 
 
-# Mixed effect models, fitted by maximum likelihood. Negative binomial regression. 
+## Mixed effect models, fitted by maximum likelihood. Negative binomial regression. 
 ```{r, results=FALSE, message=FALSE, warning=FALSE}
 ## Default repo
 local({r <- getOption("repos")
@@ -103,7 +103,7 @@ pearchi2/nobs(nb2)
 There was overdispersion when we used a Poisson model, but no overdispersion with this negative binomial model.
 
 
-## Analysis 2: Backcrossed lines: WT Kronos, *mrc-1*, *mrc-1* BC2 *aabb*,  *mrc-1* BC2 AABB
+# Analysis 2: Backcrossed lines: WT Kronos, *mrc-1*, *mrc-1* BC2 *aabb*,  *mrc-1* BC2 AABB
 We did the same analysis on these lines, from the file "2021_gpc_backcrossed.csv". Details of analysis identical to above, showing the mean and pairwise comparison outputs below.
 
 ```{r, include=FALSE}
