@@ -13,8 +13,7 @@ and the distribution of granule number chloroplast for each genotype. We
 tried a Poisson model first, but this showed overdispersion so we then
 proceeded with negative binomial models, which were not overdispersed.
 
-\#Analysis 1: Non-backcrossed lines: WT Kronos, *mrc-1*, *mrc-2*,
-*mrc-3*
+# Analysis 1: Non-backcrossed lines: WT Kronos, *mrc-1*, *mrc-2*, *mrc-3*
 
 Importing and sorting data
 
