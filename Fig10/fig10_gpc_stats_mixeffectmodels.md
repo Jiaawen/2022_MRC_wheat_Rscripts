@@ -58,9 +58,9 @@ nb2<-mixed_model(counts~group,~1|rep.id,data=dat.disag,family=negative.binomial)
 anova(nb1,nb0) #Test of random effect component, resulting p-value must be halved #ignore warning, it's caused by masking
 ```
 
-    ## Warning in anova.MixMod(nb1, nb0): it seems that the two objects represent model
-    ## with different families; are the models nested? If not, you should set 'test' to
-    ## FALSE.
+    ## Warning in anova.MixMod(nb1, nb0): it seems that the two objects represent
+    ## model with different families; are the models nested? If not, you should set
+    ## 'test' to FALSE.
 
     ## 
     ##          AIC      BIC  log.Lik    LRT df p.value
@@ -89,11 +89,11 @@ nb2r<-update(ref_grid(nb2),tran='log')
 emmeans(nb2r,~group,type='response') # predicted mean count
 ```
 
-    ##  group     response    SE  df asymp.LCL asymp.UCL
-    ##  kronos_wt     5.21 0.344 Inf      4.58      5.93
-    ##  mrc-1         2.61 0.179 Inf      2.28      2.98
-    ##  mrc-2         3.75 0.251 Inf      3.29      4.27
-    ##  mrc-3         4.77 0.317 Inf      4.19      5.44
+    ##  group     prob    SE  df asymp.LCL asymp.UCL
+    ##  kronos_wt 5.21 0.344 Inf      4.58      5.93
+    ##  mrc-1     2.61 0.179 Inf      2.28      2.98
+    ##  mrc-2     3.75 0.251 Inf      3.29      4.27
+    ##  mrc-3     4.77 0.317 Inf      4.19      5.44
     ## 
     ## Confidence level used: 0.95 
     ## Intervals are back-transformed from the log scale
@@ -183,11 +183,11 @@ showing the mean and pairwise comparison outputs below.
 emmeans(nb2r2,~group,type='response') # Predicted mean count
 ```
 
-    ##  group       response    SE  df asymp.LCL asymp.UCL
-    ##  mrc1            2.88 0.192 Inf      2.53      3.28
-    ##  mrc1_BC2        2.97 0.196 Inf      2.61      3.38
-    ##  mrc1_BC2_NS     3.55 0.233 Inf      3.13      4.04
-    ##  WT              4.71 0.306 Inf      4.15      5.35
+    ##  group       prob    SE  df asymp.LCL asymp.UCL
+    ##  mrc1        2.88 0.192 Inf      2.53      3.28
+    ##  mrc1_BC2    2.97 0.196 Inf      2.61      3.38
+    ##  mrc1_BC2_NS 3.55 0.233 Inf      3.13      4.04
+    ##  WT          4.71 0.306 Inf      4.15      5.35
     ## 
     ## Confidence level used: 0.95 
     ## Intervals are back-transformed from the log scale
