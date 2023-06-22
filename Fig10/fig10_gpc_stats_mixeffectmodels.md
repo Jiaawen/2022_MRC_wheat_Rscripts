@@ -5,7 +5,7 @@ Jiawen Chen/Statistics Services Ltd (Reading, UK)
 
 We consulted Statistics Services Ltd (Reading, UK) for the analysis of
 our count data regarding granule per chloroplast, obtained from counting
-from light microscopy images of Arabidopsis leaf sections.
+from light microscopy images of wheat leaf sections.
 
 We used mixed effects models for this, in order to take into account
 both the three biological replicates for each genotype (random effect),
